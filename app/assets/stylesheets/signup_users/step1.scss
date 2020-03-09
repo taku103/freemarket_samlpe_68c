@@ -1,0 +1,512 @@
+.newuser{
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  &--header{
+    text-align: center;
+    padding: 24px 0;
+    height: 42px;
+    img{
+      width: 150px;
+      height: 60px;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  &--main{
+    padding: 0 0 30px;
+    &--display{
+      background: #fff;
+      width: 700px;
+      margin: auto;
+      &--registration{
+        padding: 16px;
+        font-size: 18px;
+        text-align: center;
+      }
+      &--form{
+        padding: 24px 16px 40px;
+        &--choose{
+          max-width: 343px;
+          margin: 0 auto;
+          .btn-mail{
+            color: #fff;
+            background-color: #3ccace;
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            .fa-envelope{
+              position: absolute;
+              top: 50%;
+              left: 13px;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              font-size: 20px;
+            }
+          }
+          .btn-facebook{
+            background: #385185;
+            color: #fff;
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            .fa-facebook-square{
+              position: absolute;
+              top: 50%;
+              left: 10px;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              font-size: 30px;
+            }
+          }
+          .btn-sns-google{
+            background: #fff url("") no-repeat 3px top;
+            border: #979797 solid 1px;
+            color: #333;
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 48px;
+            font-size: 14px;
+            -webkit-transition: all ease-out .3s;
+            transition: all ease-out .3s;
+            cursor: pointer;
+            text-align: center;
+            .google-icon{
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+  .mains--footer{
+    width: 456px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 12px;
+    z-index: 1;
+  }
+}
+.single-container {
+  background-color: whitesmoke;
+  padding: 0 0 64px;
+  .single-header {
+    height: 128px;
+    text-align: center;
+    h1 {
+      margin: 40px 0 0;
+      display: inline-block;
+      a {
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+        img {
+          width: 185px;
+          height: 49px;
+
+        }
+      }
+    }
+  }
+}
+
+.done-container{
+  background: rgb(245, 245, 245);
+  &--header{
+    text-align: center;
+    padding: 24px 0;
+    height: 42px;
+    img{
+      width: 150px;
+      height: 60px;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  &--main{
+    text-align: center;
+    &--display{
+      width: 700px;
+      margin: auto;
+      background: #fff;
+      &--registration{
+        padding: 16px;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        &--form{
+          padding: 24px 16px 40px;
+          &--content{
+            max-width: 320px;
+            margin: 0 auto;
+            .btn-red{
+              background: #3ccace;
+              border: 1px solid #3ccace;
+              color: #fff;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              cursor: pointer;
+              margin: 24px 0 0;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mains--footer{
+    width: 456px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 150px 0;
+    text-align: center;
+    font-size: 12px;
+    z-index: 1;
+  }
+}
+
+.address-container{
+  background: rgb(245, 245, 245);
+  &--header{
+    text-align: center;
+    padding: 24px 0;
+    height: 42px;
+    img{
+      width: 150px;
+      height: 60px;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  &--main{
+    background: #fff;
+    width: 700px;
+    margin: auto;
+    &--registration{
+      &--display{
+        padding: 16px;
+        border-bottom: 1px solid #f5f5f5;
+        text-align: center;
+        font-size: 18px;
+        width: 700px;
+        margin: auto;
+      }
+      &--form{
+        padding: 24px 16px 40px;
+        
+        &--content{
+          max-width: 343px;
+          margin: 0 auto;
+          &--group{
+            .form-require{
+              background: #3CCACE;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 9px;
+              color: #fff;
+              font-size: 12px;
+            }
+            &--input{
+              width: 100%;
+              margin: 8px 0 0;
+              height: 48px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              line-height: 1.5;
+              font-size: 16px;
+            }
+          }
+          &--place{
+            &--group{
+              margin: 30px 0 0;
+              &--require{
+                background: #3CCACE;
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 9px;
+                color: #fff;
+                font-size: 12px;
+              }
+              &--input{
+                margin: 8px 0 0;
+                width: 100%;
+                height: 48px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: #fff;
+                line-height: 1.5;
+                font-size: 16px;
+              }
+              &--select{
+                .prefectures{
+                  width: 100%;
+                  height: 48px;
+                  margin: 8px 0 0;
+                }
+              }
+              &--arbitrary{
+                background: #3CCACE;
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 9px;
+                color: #fff;
+                font-size: 12px;
+              }
+            }
+            &--btn{
+              background: #3ccace;
+              border: 1px solid #3ccace;
+              color: #fff;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              margin: 30px 0 0;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.single-container{
+  &--header{
+    padding: 24px 0;
+    height: 42px;
+    text-align: center;
+    img{
+      width: 150px;
+      height: 60px;
+      vertical-align: middle;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .single-main {
+    display: block;
+    .l-single-container {
+      width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      .l-single-head.registration{
+        font-size: 22px;
+        padding: 32px;
+        text-align: center;
+        border-bottom: 1px solid #f5f5f5;
+        .l-single-inner.registration-form {
+          padding: 40px 40px 64px;
+        }
+      }
+      .l-single-content {
+        max-width: 360px;
+        margin: 0 auto;
+        .form-group {
+          margin: 32px;
+
+          label {
+            font-weight: 600;
+            font-size: 14px;
+          }
+          .form-require{
+            background: #3CCACE;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+            position: absolute;
+            }
+          
+          &_birthday{
+            width: 380px;
+            select{
+              height: 50px;
+              width: 90px;
+              margin-top: 15px;
+              margin-bottom: 25px; 
+            }
+          }
+          .input-default{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 36px;
+            padding: 4px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          .l-single-text{
+            font-size: 14px;
+          }
+          .prefecture{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 36px;
+            padding: 4px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+        }
+        .form-mail{
+          margin: 32px;
+          &_label{
+            display: flex;
+            label {
+              font-weight: 600;
+              font-size: 14px;
+            }
+            .form-require{
+              background: #3CCACE;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 12px;
+              vertical-align: top;
+              position: absolute;
+              margin-left: 7%;
+            }
+          }
+          .input-default2{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 36px;
+            padding: 4px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+        }
+        .form-names{
+          margin: 32px;
+          &-name{
+            display: flex;
+            margin-top: 20px;
+            label {
+              font-weight: 600;
+              font-size: 14px;
+            }
+            .form-require{
+              background: #3CCACE;
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 12px;
+              vertical-align: top;
+              margin-left: 7%;
+            }
+          }
+          .input-default3{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 36px;
+            padding: 4px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+        }
+        .btn_default_btn{
+          color: #fff;
+          background-color: #3CCACE;
+          font-size: 14px;
+          width: 350px;
+          height: 50px;
+          text-align: center;
+          cursor: pointer;
+          margin: 30px;
+        }
+        .birthday-select-wrap{
+          display: flex;
+          .select-default{
+            width: 110px;
+            height: 50px;
+            background-color: #fff;
+          }
+          span {
+            margin-top: 20px;
+            font-size: 14px;
+          }
+        }
+      }
+      .form-info-text{
+        font-size: 14px;
+        padding-top: 10px;
+      }
+      .text-left.l-chapter-sub-head{
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+      .btn-default.btn{
+        background-color: #3CCACE;
+        font-size: 14px;
+        width: 350px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      .form-group.text-right{
+        a {
+          padding-left: 80px;
+          font-size: 16px;
+        }
+        .form-group.recaptcha_term{
+          text-align: center;
+          padding-bottom: 20px;
+          p {
+            font-size: 12px;
+            padding-top:10px;
+            padding-bottom: 10px;
+            background-color: whitesmoke;
+            
+          }
+        }
+      }
+    }
+  }
+}

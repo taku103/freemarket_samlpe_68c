@@ -1,0 +1,10 @@
+.wrapper
+  = render partial: "/shared/header"
+  .main_background
+    .l_container
+      = render partial: "/shared/nav_side"
+      .logout_container
+        .logoutBox
+          = link_to "#", class: "logoutBtn" do
+            ログアウト
+  = render partial: "/shared/footer"

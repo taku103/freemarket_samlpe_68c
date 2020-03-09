@@ -1,0 +1,45 @@
+.wrapper
+  = render partial: "/shared/header"
+  .main_background
+    .l_container
+      = render partial: "/shared/nav_side"
+      .credit_registration_container
+        %h2.subtitleBox
+          支払い方法
+        .creditBox
+          .text
+            クレジットカード一覧
+            - if @card.present?
+              %ul.content__credit-cards__list
+                %li
+                  = form_with method: :delete, local: true, id: 'charge-form' do |f|
+                    %figure
+
+                      -# = image_tag "credit-cards/#{@card_src}", width: '26', height: '20', alt: @card_brand, id: "card_image"
+
+                    .content__credit-cards__list--pay-num
+                      = "**** **** **** " + @card_information.last4
+                    .content__credit-cards__list--pay-num
+                      - exp_month = @card_information.exp_month.to_s
+                      - exp_year = @card_information.exp_year.to_s.slice(2,3)
+                      = exp_month + " / " + exp_year
+                    %input{type: "hidden", name: "card_id", value: ""}
+                    = f.submit "削除する", {class: "content__credit-cards__list__remove"}
+                    - if flash[:notice]
+                      .alert.alert-success
+                      = flash[:notice]
+                    - if flash[:alert]
+                      .alert.alert-dange
+                      = flash[:alert]
+                    - else
+                      -# = render 'cards#new' -# カードが登録されていない場合は登録ボタンを表示するようにしています。
+          .darkSkyblue
+            .darkSkyblue_btn
+              = link_to "/cards/new", class: "blue_btn" do
+                %i.fas.fa-credit-card
+                クレジットカードを追加する
+          .how_to_payBox
+            = link_to "#", class: "pay_link" do
+              支払い方法について
+              %i.fas.fa-chevron-right
+  = render partial: "/shared/footer"

@@ -1,0 +1,146 @@
+.sell_container_back
+  .sell_container
+    .logoBox
+      =link_to image_tag('logo.png', class: 'logo'), "/informations"
+    = form_with(model: @item, local: true) do |form|
+      .product_information_container
+      
+        -# productImageBoxだが、使い回す
+        = form.fields_for :images do |image|
+          .product_Box
+            .topBox
+              .leftBox
+                出品画像
+              .rightBox
+                必須
+            #image_upload_text.text
+              = image.label '最大10枚までアップロードできます'
+            #flexBox_one_to_five.flexBox
+              = image.label :image, class: "product_default_image", id: "item_image_one_to_five" do
+                %i.fas.fa-camera
+                = image.file_field :image, accept: 'image/jpg,image/jpeg,image/png,image/gif', class: "upload_image"  
+                .image_text
+                  クリックしてファイルをアップロード
+        -# - if file.present
+        -# 以下product_nameBox
+      .product_information_container
+        .product_Box
+          .topBox
+            .leftBox
+              商品名
+            .rightBox
+              必須
+          = form.text_field :name, placeholder: "40文字以内", class: "product_name"
+        .product_Box
+          .topBox
+            .leftBox
+              商品の説明
+            .rightBox
+              必須
+          = form.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）", class: "explain_product"
+      .product_information_container
+        .product_text
+          商品の詳細
+        .product_Box
+          .topBox
+            .leftBox
+              カテゴリー
+            .rightBox
+              必須
+          = form.select :category_id, [['選択してください', 1], ['レディース', 2], ['メンズ', 3], ['ベビー', 4]], {}, {class: "selectBox"}
+        .product_Box
+          .topBox
+            .leftBox
+              ブランド
+            .rightBox-n
+              任意
+          = form.text_field :brand, placeholder: "シャネル", class: "product_name"
+        .product_Box
+          .topBox
+            .leftBox
+              商品の状態
+            .rightBox
+              必須
+          = form.select :state, [['選択してください', 1], ['新品', 2], ['中古', 3], ['パチモン', 4]], {}, {class: "selectBox"}
+      .product_information_container
+        .product_text
+          配送について
+        .product_Box
+          .topBox
+            .leftBox
+              配送料負担
+            .rightBox
+              必須
+          = form.select :postage, [['選択してください', 1], ['送料込み', 2], ['着払い', 3]], {}, {class: "selectBox"}
+        .product_Box
+          .topBox
+            .leftBox
+              発送元の地域
+            .rightBox
+              必須
+          = form.select :region, [['選択してください', 1], ['北海道', 2], ['東京', 3], ['愛知', 4]], {}, {class: "selectBox"}
+        .product_Box
+          .topBox
+            .leftBox
+              発送までの日数
+            .rightBox
+              必須
+          = form.select :shipping_days, [['選択してください', 1], ['1~2日で発送', 2], ['2~3日で発送', 3], ['4~7日で発送', 4]], {}, {class: "selectBox"}
+      .product_information_container
+        .product_text
+          価格（¥300~9,999,999）
+        .number_Box
+          .topBox
+            .leftBox
+              販売価格
+            .rightBox
+              必須
+          .yen_text
+            ¥
+          = form.number_field :price, placeholder: "0", class: "priceBox", min: 0, max: 9999999
+        .tax_Box
+          .topBox
+            .lightBox
+              販売手数料（10%）
+          .price_text
+            ¥100 
+        .number_Box#profit_Box
+          .topBox
+            .lightBox
+              販売利益
+          .price_text
+            ¥900
+        .item_sellBox 
+          = form.submit "出品する", class: "sellBtn"
+        .back_toBox
+          = link_to "#", class: "backBtn" do
+            もどる
+        .guideline
+          禁止されている
+          = link_to "#", class: "guideline_link" do
+            行為
+          および
+          = link_to "#", class: "guideline_link" do
+            出品物
+          を必ずご確認ください。
+          = link_to "#", class: "guideline_link" do
+            偽ブランド品
+          や
+          = link_to "#", class: "guideline_link" do
+            盗品物
+          などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
+          = link_to "#", class: "guideline_link" do
+            加盟店規約
+          に同意したことになります。
+    .footer_simple
+      .topBox
+        = link_to "#", class: "simple_link" do
+          プライバシーポリシー
+        = link_to "#", class: "simple_link" do
+          FURIMA利用規約
+        = link_to "#", class: "simple_link" do
+          特定商取引に関する表記
+      .logoBox
+        = image_tag "logo.png", class: "image"
+      .bottomBox
+        © FURIMA, Inc.

@@ -1,0 +1,53 @@
+%header.pcHeader
+  .headerInner
+    .mainHeader
+      %h1.icon
+        = link_to image_tag("logo.png", class: "icon_btn"), "#"
+      .searchBox
+        = form_with url: informations_path, local: true do |form|
+          = form.text_field :text, class: "searchBox--input", placeholder: "キーワードから探す"
+          .search-rightBox
+            = button_tag type: :submit, class: "submit-btn" do
+              = image_tag("icon-search-1.png", width: '20px', height: '20px', class: "search-icon")
+    .nav
+      .listsLeft
+        .listsLeft__item--first
+          %ul.menu__first-level
+            %li
+              = link_to "カテゴリー", "#", id: "brandBtn"
+              %ul.menu__second-level
+                %li
+                  %a.init-right
+                    = link_to"Child Menu", "#", id: "#"
+                  %ul.menu__third-level
+                    %li
+                      %a.init-right
+                        = link_to"Grandchild Menu", "#", id: "#"
+                      %ul.menu__fourth-level
+                        %li
+                          = link_to"Great-grandchild Menu", "#", id: "#"
+        .listsLeft__item--second
+          %ul.menu__first-level
+            %li
+              = link_to "ブランド", "#", id: "brandBtn"
+              %ul.menu__second-level
+                %li
+                  %a.init-right
+                    = link_to"Child Menu", "#", id: "#"
+      .listsRight
+        -if user_signed_in?
+          %li.listsRight__item.listsRight__item--login
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %li.listsRight__item
+            = link_to "マイページ", "/users"
+        - else
+          %li.listsRight__item.listsRight__item--login
+            = link_to "ログイン", new_user_session_path
+          %li.listsRight__item.listsRight__item--new
+            = link_to "新規会員登録", "signup_users"
+
+
+
+
+
+

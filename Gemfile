@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,6 +44,11 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'spring-commands-rspec'
 end
 
 group :development do
@@ -72,3 +77,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'haml-rails'
+gem 'font-awesome-rails'
+gem 'devise'
+gem 'activerecord-session_store'
+gem 'jquery-rails'
+gem 'payjp'
+gem 'ancestry'
+gem 'erb2haml'
+

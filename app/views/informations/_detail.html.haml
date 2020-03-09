@@ -1,0 +1,119 @@
+%nav.breadCrumbs
+  %ul
+    %li
+      =link_to "FURIMA"
+    %li
+      %i.fa.fa-angle-right
+    %li
+      =link_to "レディース"
+    %li
+      %i.fa.fa-angle-right
+    %li
+      =link_to "トップス"
+    %li
+      %i.fa.fa-angle-right
+    %li
+      =link_to "Tシャツ/カットソー(半袖/袖なし)"
+    %li
+      %i.fa.fa-angle-right
+    %li
+      %p 
+        = @item.name
+
+.main
+  .showMain
+    .contentLeftqq
+    .contentRight
+      .topContent
+        .itemBox      
+          %h2.itemBox__name 
+            = @item.name
+          .itemBox__body
+            %ul
+              %li
+                = image_tag(@item.images.first.image.url)
+                %ul
+                  %li
+                    
+                  %li
+                    
+                  %li
+                    
+
+          .itemBox__price
+            %span
+              = @item.price
+            .itemBox__price-detail
+              %span
+                (税込)
+              %span
+                送料込み
+          .itemDetail 
+            = @item.name
+          .table
+            %table
+              %tbody
+                %tr
+                  %th 出品者
+                  %td 
+                    -# = link_to 
+                    = link_to "#" do
+                      = @user.nickname
+                %tr
+                  %th カテゴリー
+                  %td
+                    =@item.category_id
+                %tr
+                  %th ブランド
+                  %td
+                
+                %tr
+                  %th 商品の説明
+                  %td 
+                    =@item.description
+                %tr
+                  %th 商品の状態
+                  %td 
+                    =@item.state
+                    
+                %tr
+                  %th 配送料の負担
+                  %td 
+                    =@item.postage
+                    
+                %tr
+                  %th 発送元の地域
+                  %td
+                    =@item.region
+                    
+                %tr
+                  %th 発送日の目安
+                  %td 
+                    =@item.shipping_days
+                    
+          .page_manage
+            .seller_btn
+              - if user_signed_in? && current_user.id == @item.seller_id   
+                .item-edit-btn
+                =link_to "編集する", edit_item_path, class: "item-edit-btn"
+                
+                .item-delete-btn
+                =link_to "削除する",information_path, method: :delete, class: 'item-delete-btn'
+            .buyer_btn
+              %a.item-buy-btn{href: "#"}
+                購入画面に進む
+
+      %ul.links
+        %li
+          =link_to "#" do
+            %i.fa.fa-angle-left
+            %span
+            前の商品
+        %li
+          =link_to "#" do
+            %span
+            後ろの商品
+            %i.fa.fa-angle-right
+      .relatedItems
+        =link_to "同じカテゴリーの商品をもっと見る"
+        .productLists

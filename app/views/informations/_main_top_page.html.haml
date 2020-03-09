@@ -1,0 +1,127 @@
+.main
+  %section.mainVisual
+    .content
+      %h2.content__subtitle
+        %br
+        人生を変えるフリマアプリ
+      %p.content__text
+        FURIMAは誰でもかんたんに出品・購入できる
+        %br
+        フリマアプリです
+
+      .content__btn
+        = link_to image_tag('Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg', class: 'aBtn'), "#"
+        = link_to image_tag('google-play-badge.png', class: 'gBtn'), "#"
+  %section.topIntroduction
+    %h2.subtitle
+      FURIMAが選ばれる3つの理由
+    %ul.introduction-box
+      %li.introduction-a 
+        .image-a
+          = image_tag 'pict-reason-01.jpg', class: 'image-a-tag'
+          .number
+            1
+        %h3.list__text
+          %span
+            3分  
+          ですぐに出品
+        %p.list__description
+          スマホで入力するだけで簡単に出品できる！
+
+      %li.introduction-b
+        .image-b
+          = image_tag 'pict-reason-02.jpg', class: 'image-b-tag'
+          .number
+            2
+        %h3.list__text
+          %span
+            シンプル  
+          で使いやすい
+        %p.list__description
+          めんどくさい入力は必要なく、検索も購入もスムーズ！
+
+      %li.introduction-c
+        .image-c
+          = image_tag 'pict-reason-03.jpg', class: 'image-c-tag'
+          .number
+            3
+        %h3.list__text
+          手数料  
+          %span
+            業界最安
+        %p.list__description
+          最大3%でお得に出品&購入！
+  %section.topMiddleDl
+    .topMiddleDl__inner
+      %h2.subtitle
+        会員数日本一位
+      .text
+        FURIMAは、フリマアプリで最も人気。
+        %br
+        出品・購入回数も業界最多です！
+        %br
+        ほしかったあの商品に出会えるかもしれません。
+      .content__btn
+        = link_to image_tag('Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg', class: 'aBtn'), "#"
+        = link_to image_tag('google-play-badge.png', class: 'gBtn'), "#"
+  %section.topKeyFeatures
+    %h2.head
+      FURIMAの特徴
+    %ul.items
+      %li.item-a
+        .image-box
+          = image_tag 'icon-01.png', class: 'image'
+        .text
+          %h2.item__subtitle
+            簡単に売り買いできる
+          %p.item__detail
+            スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+      %li.item-b
+        .image-box
+          = image_tag 'icon-03.png', class: 'image'
+        .text
+          %h2.item__subtitle
+            売上金は即日振込みに対応
+          %p.item__detail
+            午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+
+      %li.item-c
+        .image-box
+          = image_tag 'icon-04.png', class: 'image'
+        .text
+          %h2.item__subtitle
+            様々な支払いに対応
+          %p.item__detail
+            お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+  %section.pickUpContainer
+    .head
+      ピックアップカテゴリー
+    .productContainer
+      .productHead
+        = link_to "#" do
+          %h3.title 
+            新規投稿商品
+      .productLists
+        - @items.each do |item|
+          .productList
+            = link_to information_path(item.id), method: :get do
+              .product__info
+                %h3.name
+                  = item.name 
+                .product__info__image
+                  = image_tag(item.images.first.image.url, resize: '188x188')
+                  -if item.buyer_id.present? 
+                    .items-box_photo__sold
+                      .items-box_photo__sold__inner
+                        SOLD
+                %ul.details
+                  %li.price
+                    %p
+                    ¥
+                    = item.price 
+                  %li.like
+                    %i.fas.fa-star
+                    0
+                %p
+                  (税込)¥
+                  = (item.price * 1.1).ceil

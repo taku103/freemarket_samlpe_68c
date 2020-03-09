@@ -1,0 +1,54 @@
+.logins
+  .logins__header
+    =link_to image_tag('logo.png', class: 'login__header__image'), "/informations"
+    
+  .logins__row
+    .logins__row__container
+
+      .logins__row__container__header
+        %h2 連携済みアカウントでログイン
+
+      .logins__row__container__icons
+        .logins__row__container__icons__icon
+          =link_to ""
+        .logins__row__container__icons__icon
+          = link_to image_tag('data:image/png;base64,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',size: "75*75"),""
+        .logins__row__container__icons__icon
+          = link_to image_tag('https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/47/72/0c/47720c48-9bff-c435-1397-e716e12d6187/Icon-Production-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png',size: "75*75"),""
+        .logins__row__container__icons__icon
+          =link_to ""
+    
+      .logins__row__container__border
+        .logins__row__container__border__beforeborder
+        %p もしくは
+        .logins__row__container__border__afterborder
+    
+      .logins__row__container__middle
+        %h2 メールアドレスでログイン
+
+      .logins__row__container__form
+
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form-field
+            .form-field__input
+              = f.email_field :email, autofocus: true, placeholder: "メールアドレス"
+            .form-field__input
+              = f.password_field :password, autofocus: true, placeholder: "パスワード"
+            .form-field__button
+              = f.submit "ログイン", class: 'btn'
+        
+      .logins__row__container__restart
+        = link_to "#" do
+          パスワード、ログイン方法を忘れた方はこちらから
+
+  .logins__row__br
+
+  .logins__row__registation
+    .logins__row__registation__text
+      %h2 フリマに未登録の方は
+      = link_to "/signup_users" do
+        %button 
+          登録する
+  
+  .logins__row__footer
+    %p © Furima, Inc. All Rights Reserved.     

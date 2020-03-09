@@ -1,0 +1,286 @@
+.sell_container_back{
+  background-color: #f6f6f6;
+  .sell_container{
+    padding-top: 50px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    .logoBox{
+      display: block;
+      width: 200px;
+      margin: 0 auto 50px auto;
+      .logo{
+        height: 58px;
+      }
+    }
+    .product_information_container{
+      // margin-top: 50px;
+      width: 100%;
+      margin-bottom: 2px;
+      background-color: #fff;
+      padding-bottom: 45px;
+      .product_text{
+        padding: 45px 0 0 45px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #777;
+      }
+      // product_Boxかnumber_Boxか選ぶ
+      .product_Box{
+        padding: 45px 0 0 45px;
+        background-color: #fff;
+      }
+      .number_Box{
+        padding: 27px 45px 27px 45px;
+        background-color: #fff;
+        display: flex;
+      }
+      .tax_Box{
+        border-bottom: 1px #ddd solid;
+        margin: 27px 45px 0 45px;
+        padding-bottom: 27px;
+        background-color: #fff;
+        display: flex;
+      }
+
+      .topBox{
+        display: flex;
+        font-size: 14px;
+        font-weight: bold;
+        // lightBox, leftBox, rightBox,rightBox-nから選択
+        .lightBox{
+          color: #333;
+          font-weight: normal;
+        }
+        .leftBox{
+          margin-top: 2px;
+        }
+        .rightBox{
+
+          height: 13px;
+          font-size: 12px;
+          margin-left: 5px;
+          padding: 2px;
+          background-color: #3CCACE;
+          color: #fff;
+          border-radius: 9px;
+        }
+        .rightBox-n{
+          font-size: 13px;
+          margin-left: 5px;
+          padding: 2px;
+          background-color: rgb(168, 168, 168);
+          color: #fff;
+        }
+      }
+      // これ以上が共通
+      // image
+      .text{
+        margin: 20px 0;
+        font-size: 13px;
+        color: #555;
+      }
+      .flexBox{
+        display: flex;
+        padding-right: 45px;
+        .imageBox{
+          border: 1px #ddd solid;
+          width: 120px;
+          height: 160px;
+          .bottomBtn{
+            display: flex;
+            .item_image_deleteBtn{
+              text-align: center;
+              color: rgb(0, 160, 235);
+              cursor: pointer;
+            }
+          }
+        }
+        .product_default_image{
+          color: blue;
+          background-color: #f6f6f6;
+          border: 1px #bbb dashed;
+          width: 100%;
+          // width: 600px;
+          height: 160px;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          
+          .fa-camera{
+            margin-top: 45px;
+            color: #333;
+            // height: 16px;
+            margin-left: auto;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 20px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            &::before {
+              // font-family:'Font Awesome 5 Free';
+              font-family: FontAwesome;
+              font-weight: 900;
+              content: "\f030";
+            }
+          }
+          .upload_image{
+            display: none;
+            width: 100%;
+            height: 100%;
+            
+          }
+          .image_text{
+            margin-top: 15px;
+            color: #333;
+            font-size: 14px ;
+          }
+        }
+      }
+      .product_name{
+        margin-top: 15px;
+        padding: 10px;
+        width: 582px;
+        font-size: 16px;
+        border: 1px #bbb solid;
+        border-radius: 2px;
+      }
+      .explain_product{
+        margin-top: 15px;
+        width: 600px;
+        height: 200px;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px #bbb solid;
+        border-radius: 2px;
+      }
+      .selectBox{
+        background-color: #fff;
+        color: #333;
+        font-size: 18px;
+        margin-top: 15px;
+        width: 600px;
+        height: 45px;
+      }
+      .yen_text{
+        margin-left: 190px;
+        line-height: 40px;
+      }
+      .priceBox{
+        margin-left: 10px;
+        text-align: right;
+        width: 300px;
+        font-size: 16px;
+      }
+      .price_text{
+        font-size: 14px;
+        color: #333;
+        font-weight: lighter;
+        margin-left: auto;
+      }
+    }
+    .sellBtn{
+      width: 350px;
+      height: 45px;
+      display: block;
+      text-align: center;
+      margin: auto;
+      background-color: rgb(1, 218, 199);
+      border-radius: 5px;
+      transition: 0.4s;
+      font-size: 18px;
+      border: 0;
+      font-weight: bold;
+      color: #eee;
+      &:hover{
+        transition: 0.2s;
+        background-color: rgb(0, 190, 175);
+      }
+    }
+    .item_sellBox{
+      width: 350px;
+      height: 45px;
+      text-align: center;
+      margin: 25px auto;
+      // background-color: #3CCACE;
+      border-radius: 5px;
+      transition: 0.4s;
+      border: solid #3CCACE 1px;
+      &:hover{
+        transition: 0.2s;
+        // border: solid gold 1px;
+      }
+      input {
+        width: 350px;
+        height: 45px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 45px;
+        color: #fff;
+        background-color: #3CCACE;
+      }
+      .backBtn{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .back_toBox{
+      width: 350px;
+      height: 45px;
+      text-align: center;
+      margin: 25px auto;
+      background-color: #bbb;
+      border-radius: 5px;
+      transition: 0.4s;
+      &:hover{
+        transition: 0.2s;
+        background-color: #aaa;
+      }
+      a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 45px;
+        color: #333;
+      }
+    }
+    .guideline{
+      font-size: 12px;
+      padding: 15px 45px;
+      
+      a{
+        text-decoration: none;
+        color: #0097bd;
+      }
+    }
+    .footer_simple{
+      padding: 50px 100px;
+      .topBox{
+        display: flex;
+        margin-bottom: 50px;
+        a{
+          text-decoration: none;
+          font-size: 12px;
+          color: #333;
+        }
+        .simple_link{
+          margin: 0 auto;
+        }
+      }
+      .logoBox{
+        text-align: center;
+        margin: 0 auto;
+        .image{
+          opacity: 0.5;
+          width: 100px;
+        }
+      }
+      .bottomBox{
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+}
